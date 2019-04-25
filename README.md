@@ -60,3 +60,6 @@ http://localhost:8080/old/allinpay
 ```SHELL
 {"no":"N1556172950228","payId":10002,"form":"这是 ifelse.switch 通联表单"}
 ```
+
+流程图:
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190425154424728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dsams1MDY=,size_16,color_FFFFFF,t_70)
