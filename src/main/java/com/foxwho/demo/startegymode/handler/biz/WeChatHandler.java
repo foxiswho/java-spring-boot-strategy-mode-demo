@@ -21,6 +21,7 @@ public class WeChatHandler extends AbstractHandler {
         PayDto payDto = new PayDto();
         //拷贝对象
         BeanUtils.copyProperties(dto, payDto);
+        //调用 微信SDK
         payDto.setForm("这是微信表单");
         return payDto;
     }

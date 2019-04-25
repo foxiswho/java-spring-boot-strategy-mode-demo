@@ -3,21 +3,25 @@ package com.foxwho.demo.startegymode.controller;
 import com.foxwho.demo.startegymode.constant.PayConstant;
 import com.foxwho.demo.startegymode.model.OrderDto;
 import com.foxwho.demo.startegymode.model.PayDto;
+import com.foxwho.demo.startegymode.service.PayOldService;
 import com.foxwho.demo.startegymode.service.PayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 
+@RequestMapping("/old")
 @RestController
-public class PayController {
+public class PayOldController {
 
     @Autowired
-    private PayService payService;
+    private PayOldService payOldService;
 
     /**
      * 支付宝
+     *
      * @return
      */
     @GetMapping("/alipay")
@@ -26,12 +30,13 @@ public class PayController {
         orderDto.setPayId(PayConstant.PAY_ID_ALIPAY);
         orderDto.setNo("N" + System.currentTimeMillis());
         orderDto.setAmountPayment(new BigDecimal(20000.0));
-        PayDto payDto = payService.handle(orderDto);
+        PayDto payDto = payOldService.handle(orderDto);
         return payDto;
     }
 
     /**
      * 通联支付
+     *
      * @return
      */
     @GetMapping("/allinpay")
@@ -40,12 +45,13 @@ public class PayController {
         orderDto.setPayId(PayConstant.PAY_ID_ALLINPAY);
         orderDto.setNo("N" + System.currentTimeMillis());
         orderDto.setAmountPayment(new BigDecimal(20000.0));
-        PayDto payDto = payService.handle(orderDto);
+        PayDto payDto = payOldService.handle(orderDto);
         return payDto;
     }
 
     /**
      * 微信
+     *
      * @return
      */
     @GetMapping("/wechat")
@@ -54,7 +60,7 @@ public class PayController {
         orderDto.setPayId(PayConstant.PAY_ID_WECHAT);
         orderDto.setNo("N" + System.currentTimeMillis());
         orderDto.setAmountPayment(new BigDecimal(20000.0));
-        PayDto payDto = payService.handle(orderDto);
+        PayDto payDto = payOldService.handle(orderDto);
         return payDto;
     }
 }

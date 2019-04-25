@@ -31,3 +31,32 @@ http://localhost:8080/allinpay
 ```SHELL
 {"no":"N1556172950228","payId":10002,"form":"这是通联表单"}
 ```
+
+
+# IF ELSE 方式
+## 支付宝
+```SHELL
+http://localhost:8080/old/alipay
+```
+输出
+```SHELL
+{"no":"N1556172818764","payId":10000,"form":"这是 ifelse.switch 支付宝表单"}
+```
+
+## 微信支付
+```SHELL
+http://localhost:8080/old/wechat
+```
+输出
+```SHELL
+{"no":"N1556172909399","payId":10001,"form":"这是 ifelse.switch 微信表单"}
+```
+
+## 通联支付
+```SHELL
+http://localhost:8080/old/allinpay
+```
+输出
+```SHELL
+{"no":"N1556172950228","payId":10002,"form":"这是 ifelse.switch 通联表单"}
+```
