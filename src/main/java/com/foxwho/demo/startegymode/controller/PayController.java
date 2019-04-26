@@ -3,7 +3,7 @@ package com.foxwho.demo.startegymode.controller;
 import com.foxwho.demo.startegymode.constant.PayConstant;
 import com.foxwho.demo.startegymode.model.OrderDto;
 import com.foxwho.demo.startegymode.model.PayDto;
-import com.foxwho.demo.startegymode.service.PayService;
+import com.foxwho.demo.startegymode.service.IStrategyPayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 public class PayController {
 
     @Autowired
-    private PayService payService;
+    private IStrategyPayService payService;
 
     /**
      * 支付宝

@@ -4,7 +4,6 @@ import com.foxwho.demo.startegymode.constant.PayConstant;
 import com.foxwho.demo.startegymode.model.OrderDto;
 import com.foxwho.demo.startegymode.model.PayDto;
 import com.foxwho.demo.startegymode.service.PayOldService;
-import com.foxwho.demo.startegymode.service.PayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

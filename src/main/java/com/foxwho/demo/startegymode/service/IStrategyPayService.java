@@ -3,7 +3,10 @@ package com.foxwho.demo.startegymode.service;
 import com.foxwho.demo.startegymode.model.OrderDto;
 import com.foxwho.demo.startegymode.model.PayDto;
 
-public interface PayService {
+/**
+ * 策略接口
+ */
+public interface IStrategyPayService {
     /**
      * 根据订单的不同类型作出不同的处理
      *

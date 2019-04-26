@@ -18,14 +18,14 @@ public class HandlerProcessor implements BeanFactoryPostProcessor {
     /**
      * 包路径
      */
-    private static final String HANDLER_PACKAGE = "com.foxwho.demo.startegymode.handler.biz";
+    private static final String HANDLER_PACKAGE = "com.foxwho.demo.startegymode.handler.concrete";
 
     /**
      * 扫描@HandlerPayId，初始化HandlerContext，将其注册到spring容器
      *
      * @param beanFactory bean工厂
      * @see HandlerPayId
-     * @see HandlerContext
+     * @see StrategyHandlerContext
      */
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
@@ -38,9 +38,9 @@ public class HandlerProcessor implements BeanFactoryPostProcessor {
             handlerMap.put(type, clazz);
         });
         // 初始化HandlerContext，将其注册到spring容器中
-        HandlerContext context = new HandlerContext(handlerMap);
+        StrategyHandlerContext context = new StrategyHandlerContext(handlerMap);
         //注册到spring容器中
-        beanFactory.registerSingleton(HandlerContext.class.getName(), context);
+        beanFactory.registerSingleton(StrategyHandlerContext.class.getName(), context);
     }
 
 }

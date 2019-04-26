@@ -1,4 +1,4 @@
-package com.foxwho.demo.startegymode.handler.biz;
+package com.foxwho.demo.startegymode.handler.concrete;
 
 import com.foxwho.demo.startegymode.constant.PayConstant;
 import com.foxwho.demo.startegymode.handler.AbstractHandler;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @HandlerPayId(payId = PayConstant.PAY_ID_WECHAT)
-public class WeChatHandler extends AbstractHandler {
+public class ConcreteStrategyWeChatHandler extends AbstractHandler {
 
     @Override
     public PayDto handler(OrderDto dto) {

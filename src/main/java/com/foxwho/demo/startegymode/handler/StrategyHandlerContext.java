@@ -5,12 +5,15 @@ import com.foxwho.demo.startegymode.util.SpringBeanUtil;
 
 import java.util.Map;
 
+/**
+ * 策略上下文
+ */
 @SuppressWarnings("unchecked")
-public class HandlerContext {
+public class StrategyHandlerContext {
 
     private Map<Integer, Class> handlerMap;
 
-    public HandlerContext(Map<Integer, Class> handlerMap) {
+    public StrategyHandlerContext(Map<Integer, Class> handlerMap) {
         this.handlerMap = handlerMap;
     }
 
